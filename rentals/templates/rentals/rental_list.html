@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}貸出一覧{% endblock title %}
+
+{% block extrahead %}
+<style>
+table {
+  margin-top: 8px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+    <h3 class="page-header">貸出一覧</h3>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>備品</th>
+          <th>管理番号</th>
+          <th>管理者</th>
+          <th>利用者</th>
+          <th>ステータス</th>
+          <th>最終更新日</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for rental in rentals %}
+        <tr>
+          <td>{{ rental.equipment.name }}</td>
+          <td>{{ rental.equipment.manage_no }}</td>
+          <td>{{ rental.equipment.manage_name }}</td>
+          <td>{{ rental.user.name }}</td>
+          <td>{{ rental.is_rentaled|yesno:'貸出中,' }}</td>
+          <td>{{ rental.created_at }}</td>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+{% endblock content %}

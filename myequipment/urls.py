@@ -18,8 +18,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from rentals.urls import router as rentals_router
+from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(rentals_router.urls)),
+    url(r'^jwt-token', obtain_jwt_token),
+    url(r'^rentals/', include('rentals.urls', namespace='rentals')),
 ]
