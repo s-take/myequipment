@@ -25,7 +25,7 @@ SECRET_KEY = 'a(=)63ikzly=dm4zt%7g@b1s*8a4409rx080533gw&9+@#*y+u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rentals',
     'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -129,7 +130,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-'''
 REST_FRAMEWORK = { 
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
@@ -138,10 +138,12 @@ REST_FRAMEWORK = {
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     ),  
     'NON_FIELD_ERRORS_KEY': 'detail',
-    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10,
+    'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',) 
 }
-'''
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
+JWT_AUTH = {
+    'JWT_VERIFY_EXPIRATION': False,
+}

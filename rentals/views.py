@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from rest_framework import viewsets
 from .models import User, Equipment, Rental
 from .serializers import UserSerializer, EquipmentSerializer, RentalSerializer
-#from rest_framework import permissions
+from rest_framework import permissions
 
 # Create your views here.
 def rental_list(request):
@@ -19,16 +19,17 @@ def rental_list(request):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-#    permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (permissions.IsAuthenticated,)
 
 
 class EquipmentViewSet(viewsets.ModelViewSet):
     queryset = Equipment.objects.all()
     serializer_class = EquipmentSerializer
-#    permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (permissions.IsAuthenticated,)
 
 
 class RentalViewSet(viewsets.ModelViewSet):
     queryset = Rental.objects.all()
     serializer_class = RentalSerializer
-#    permission_classes = (permissions.IsAuthenticated,)
+    filter_fields = ('equipment', 'user')
+    permission_classes = (permissions.IsAuthenticated,)

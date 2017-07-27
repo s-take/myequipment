@@ -21,6 +21,7 @@ table {
           <th>利用者</th>
           <th>ステータス</th>
           <th>最終更新日</th>
+          <th>備考</th>
         </tr>
       </thead>
       <tbody>
@@ -32,6 +33,7 @@ table {
           <td>{{ rental.user.name }}</td>
           <td>{{ rental.is_rentaled|yesno:'貸出中,' }}</td>
           <td>{{ rental.created_at }}</td>
+          <td>{{ rental.equipment.comment }}</td>
           </td>
         </tr>
         {% endfor %}
