@@ -4,7 +4,8 @@ from django.db import models
 # Create your models here.
 class User(models.Model):
     """ユーザー"""
-    employee_no = models.CharField('社員番号', max_length=64,primary_key=True)
+    nfc_id = models.CharField('NFCID', max_length=64,primary_key=True)
+    employee_no = models.CharField('社員番号', max_length=64)
     name = models.CharField('氏名', max_length=256)
 
     def __unicode__(self):
@@ -31,17 +32,6 @@ class Rental(models.Model):
     created_at = models.DateTimeField('更新時間', auto_now_add=True)
     def is_rentaled(self):
         return self.processing == "rent"
-    '''
-    def get_equipment_name(self):
-        return Equipment.objects.get(key=self.name)
-    def get_equipment_manage_no(self):
-        return Equipment.objects.get(key=self.manage_no)
-    def get_equipment_manage_user(self):
-        return Equipment.objects.get(key=self.manage_user)
-    def get_equipment_comment(self):
-        return Equipment.objects.get(key=self.comment)
-    def get_user_name(self):
-        return User.objects.get(key=self.name)
-    '''
+
     def __unicode__(self):
         return self.equipment.name

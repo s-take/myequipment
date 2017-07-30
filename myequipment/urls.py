@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^api/', include(rentals_router.urls)),
     url(r'^jwt-token', obtain_jwt_token),
     url(r'^rentals/', include('rentals.urls', namespace='rentals')),
+    url(r'^', include('django.contrib.staticfiles.urls')),
 ]

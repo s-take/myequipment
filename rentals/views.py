@@ -19,12 +19,14 @@ def rental_list(request):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    filter_fields = ('nfc_id',)
     permission_classes = (permissions.IsAuthenticated,)
 
 
 class EquipmentViewSet(viewsets.ModelViewSet):
     queryset = Equipment.objects.all()
     serializer_class = EquipmentSerializer
+    filter_fields = ('barcode',)
     permission_classes = (permissions.IsAuthenticated,)
 
 

@@ -7,8 +7,8 @@ from rentals.models import User, Equipment, Rental
 #admin.site.register(Equipment)
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('employee_no', 'name',)
-    list_display_links = ('employee_no', 'name',)
+    list_display = ('nfc_id', 'employee_no', 'name',)
+    list_display_links = ('nfc_id', 'employee_no', 'name',)
 admin.site.register(User, UserAdmin)
 
 

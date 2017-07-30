@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'a(=)63ikzly=dm4zt%7g@b1s*8a4409rx080533gw&9+@#*y+u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -85,8 +85,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'rental',
         'USER': 'postgres',
-        'PASSWORD' : 'admin123',
-        'HOST' : '192.168.99.100',
+        'PASSWORD' : 'postgres',
+        'HOST' : '127.0.0.1',
         'PORT' : 5432,
     }
 }
@@ -129,6 +129,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 REST_FRAMEWORK = { 
     'DEFAULT_PERMISSION_CLASSES': (

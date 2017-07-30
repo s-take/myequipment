@@ -5,13 +5,12 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 0001_initial.py	../rentals/migrations/0001_initial.py	1;"	kind:file	line:1
-0002_auto_20170725_2305.py	../rentals/migrations/0002_auto_20170725_2305.py	1;"	kind:file	line:1
-ALLOWED_HOSTS	../myequipment/settings.py	/^ALLOWED_HOSTS = []$/;"	kind:variable	line:28
-AUTH_PASSWORD_VALIDATORS	../myequipment/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:89
+ALLOWED_HOSTS	../myequipment/settings.py	/^ALLOWED_HOSTS = ["*"]$/;"	kind:variable	line:28
+AUTH_PASSWORD_VALIDATORS	../myequipment/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:98
 AppConfig	../rentals/apps.py	/^from django.apps import AppConfig$/;"	kind:namespace	line:1
 BASE_DIR	../myequipment/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
-DATABASES	../myequipment/settings.py	/^DATABASES = {$/;"	kind:variable	line:78
-DEBUG	../myequipment/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
+DATABASES	../myequipment/settings.py	/^DATABASES = {$/;"	kind:variable	line:79
+DEBUG	../myequipment/settings.py	/^DEBUG = False$/;"	kind:variable	line:26
 Equipment	../rentals/admin.py	/^from rentals.models import User, Equipment, Rental$/;"	kind:namespace	line:2
 Equipment	../rentals/models.py	/^class Equipment(models.Model):$/;"	kind:class	line:14
 Equipment	../rentals/serializers.py	/^from .models import User, Equipment, Rental$/;"	kind:namespace	line:3
@@ -20,17 +19,18 @@ EquipmentAdmin	../rentals/admin.py	/^class EquipmentAdmin(admin.ModelAdmin):$/;"
 EquipmentSerializer	../rentals/serializers.py	/^class EquipmentSerializer(serializers.ModelSerializer):$/;"	kind:class	line:12
 EquipmentSerializer	../rentals/views.py	/^from .serializers import UserSerializer, EquipmentSerializer, RentalSerializer$/;"	kind:namespace	line:6
 EquipmentViewSet	../rentals/urls.py	/^from .views import UserViewSet, EquipmentViewSet, RentalViewSet$/;"	kind:namespace	line:5
-EquipmentViewSet	../rentals/views.py	/^class EquipmentViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:30
+EquipmentViewSet	../rentals/views.py	/^class EquipmentViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:25
 HttpResponse	../rentals/views.py	/^from django.http import HttpResponse$/;"	kind:namespace	line:3
 INSTALLED_APPS	../myequipment/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:33
-LANGUAGE_CODE	../myequipment/settings.py	/^LANGUAGE_CODE = 'ja'$/;"	kind:variable	line:108
-MIDDLEWARE	../myequipment/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:44
+JWT_AUTH	../myequipment/settings.py	/^JWT_AUTH = {$/;"	kind:variable	line:150
+LANGUAGE_CODE	../myequipment/settings.py	/^LANGUAGE_CODE = 'ja'$/;"	kind:variable	line:117
+MIDDLEWARE	../myequipment/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:45
 Meta	../rentals/serializers.py	/^    class Meta:$/;"	kind:class	line:13
 Meta	../rentals/serializers.py	/^    class Meta:$/;"	kind:class	line:19
 Meta	../rentals/serializers.py	/^    class Meta:$/;"	kind:class	line:7
 Migration	../rentals/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:9
-Migration	../rentals/migrations/0002_auto_20170725_2305.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:10
-ROOT_URLCONF	../myequipment/settings.py	/^ROOT_URLCONF = 'myequipment.urls'$/;"	kind:variable	line:54
+REST_FRAMEWORK	../myequipment/settings.py	/^REST_FRAMEWORK = { $/;"	kind:variable	line:136
+ROOT_URLCONF	../myequipment/settings.py	/^ROOT_URLCONF = 'myequipment.urls'$/;"	kind:variable	line:55
 Rental	../rentals/admin.py	/^from rentals.models import User, Equipment, Rental$/;"	kind:namespace	line:2
 Rental	../rentals/models.py	/^class Rental(models.Model):$/;"	kind:class	line:26
 Rental	../rentals/serializers.py	/^from .models import User, Equipment, Rental$/;"	kind:namespace	line:3
@@ -39,17 +39,17 @@ RentalAdmin	../rentals/admin.py	/^class RentalAdmin(admin.ModelAdmin):$/;"	kind:
 RentalSerializer	../rentals/serializers.py	/^class RentalSerializer(serializers.ModelSerializer):$/;"	kind:class	line:18
 RentalSerializer	../rentals/views.py	/^from .serializers import UserSerializer, EquipmentSerializer, RentalSerializer$/;"	kind:namespace	line:6
 RentalViewSet	../rentals/urls.py	/^from .views import UserViewSet, EquipmentViewSet, RentalViewSet$/;"	kind:namespace	line:5
-RentalViewSet	../rentals/views.py	/^class RentalViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:36
+RentalViewSet	../rentals/views.py	/^class RentalViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:31
 RentalsConfig	../rentals/apps.py	/^class RentalsConfig(AppConfig):$/;"	kind:class	line:4
 SECRET_KEY	../myequipment/settings.py	/^SECRET_KEY = 'a(=)63ikzly=dm4zt%7g@b1s*8a4409rx080533gw&9+@#*y+u'$/;"	kind:variable	line:23
-STATICFILES_DIRS	../myequipment/settings.py	/^STATICFILES_DIRS = ($/;"	kind:variable	line:137
-STATIC_URL	../myequipment/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:122
-TEMPLATES	../myequipment/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:56
-TIME_ZONE	../myequipment/settings.py	/^TIME_ZONE = 'Asia\/Tokyo'$/;"	kind:variable	line:110
+STATICFILES_DIRS	../myequipment/settings.py	/^STATICFILES_DIRS = ($/;"	kind:variable	line:132
+STATIC_URL	../myequipment/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:131
+TEMPLATES	../myequipment/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:57
+TIME_ZONE	../myequipment/settings.py	/^TIME_ZONE = 'Asia\/Tokyo'$/;"	kind:variable	line:119
 TestCase	../rentals/tests.py	/^from django.test import TestCase$/;"	kind:namespace	line:1
-USE_I18N	../myequipment/settings.py	/^USE_I18N = True$/;"	kind:variable	line:112
-USE_L10N	../myequipment/settings.py	/^USE_L10N = True$/;"	kind:variable	line:114
-USE_TZ	../myequipment/settings.py	/^USE_TZ = True$/;"	kind:variable	line:116
+USE_I18N	../myequipment/settings.py	/^USE_I18N = True$/;"	kind:variable	line:121
+USE_L10N	../myequipment/settings.py	/^USE_L10N = True$/;"	kind:variable	line:123
+USE_TZ	../myequipment/settings.py	/^USE_TZ = True$/;"	kind:variable	line:125
 User	../rentals/admin.py	/^from rentals.models import User, Equipment, Rental$/;"	kind:namespace	line:2
 User	../rentals/models.py	/^class User(models.Model):$/;"	kind:class	line:5
 User	../rentals/serializers.py	/^from .models import User, Equipment, Rental$/;"	kind:namespace	line:3
@@ -58,87 +58,58 @@ UserAdmin	../rentals/admin.py	/^class UserAdmin(admin.ModelAdmin):$/;"	kind:clas
 UserSerializer	../rentals/serializers.py	/^class UserSerializer(serializers.ModelSerializer):$/;"	kind:class	line:6
 UserSerializer	../rentals/views.py	/^from .serializers import UserSerializer, EquipmentSerializer, RentalSerializer$/;"	kind:namespace	line:6
 UserViewSet	../rentals/urls.py	/^from .views import UserViewSet, EquipmentViewSet, RentalViewSet$/;"	kind:namespace	line:5
-UserViewSet	../rentals/views.py	/^class UserViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:24
-WSGI_APPLICATION	../myequipment/settings.py	/^WSGI_APPLICATION = 'myequipment.wsgi.application'$/;"	kind:variable	line:72
+UserViewSet	../rentals/views.py	/^class UserViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:19
+WSGI_APPLICATION	../myequipment/settings.py	/^WSGI_APPLICATION = 'myequipment.wsgi.application'$/;"	kind:variable	line:73
 __init__.py	../myequipment/__init__.py	1;"	kind:file	line:1
 __init__.py	../rentals/__init__.py	1;"	kind:file	line:1
 __init__.py	../rentals/migrations/__init__.py	1;"	kind:file	line:1
 __unicode__	../rentals/models.py	/^    def __unicode__(self):$/;"	kind:member	line:10
 __unicode__	../rentals/models.py	/^    def __unicode__(self):$/;"	kind:member	line:22
-__unicode__	../rentals/models.py	/^    def __unicode__(self):$/;"	kind:member	line:44
+__unicode__	../rentals/models.py	/^    def __unicode__(self):$/;"	kind:member	line:46
 admin	../myequipment/urls.py	/^from django.contrib import admin$/;"	kind:namespace	line:19
 admin	../rentals/admin.py	/^from django.contrib import admin$/;"	kind:namespace	line:1
 admin.py	../rentals/admin.py	1;"	kind:file	line:1
 application	../myequipment/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
 apps.py	../rentals/apps.py	1;"	kind:file	line:1
-barcode	../rentals/models.py	/^    barcode = models.CharField('バーコード', max_length=255, primary_key=True)$/;"	kind:variable	line:16
+barcode	../rentals/models.py	/^    barcode = models.CharField('バーコード', max_length=64, primary_key=True)$/;"	kind:variable	line:16
 comment	../rentals/models.py	/^    comment = models.TextField('備考', blank=True)$/;"	kind:variable	line:20
 created_at	../rentals/models.py	/^    created_at = models.DateTimeField('更新時間', auto_now_add=True)$/;"	kind:variable	line:31
 db	../rentals/migrations/0001_initial.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
-db	../rentals/migrations/0002_auto_20170725_2305.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
 deletion	../rentals/migrations/0001_initial.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
-deletion	../rentals/migrations/0002_auto_20170725_2305.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
 dependencies	../rentals/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:13
-dependencies	../rentals/migrations/0002_auto_20170725_2305.py	/^    dependencies = [$/;"	kind:variable	line:12
 django	../manage.py	/^            import django$/;"	kind:namespace	line:14
 django	../rentals/migrations/0001_initial.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
-django	../rentals/migrations/0002_auto_20170725_2305.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
-django	../rentals/migrations/0002_auto_20170725_2305.py	/^import django.utils.timezone$/;"	kind:namespace	line:7
-employee_no	../rentals/models.py	/^    employee_no = models.CharField('社員番号', max_length=255,primary_key=True)$/;"	kind:variable	line:7
-equipment	../rentals/models.py	/^    equipment = models.ForeignKey(Equipment, verbose_name='備品', related_name='rentals_equipment')$/;"	kind:variable	line:28
+employee_no	../rentals/models.py	/^    employee_no = models.CharField('社員番号', max_length=64,primary_key=True)$/;"	kind:variable	line:7
+equipment	../rentals/models.py	/^    equipment = models.ForeignKey(Equipment)$/;"	kind:variable	line:28
 equipment_name	../rentals/admin.py	/^    def equipment_name(self, obj):$/;"	kind:member	line:27
 execute_from_command_line	../manage.py	/^        from django.core.management import execute_from_command_line$/;"	kind:namespace	line:8
-field	../rentals/migrations/0001_initial.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='rentals', to='rentals.User', verbose_name=b'\\xe3\\x83\\xa6\\xe3\\x83\\xbc\\xe3\\x82\\xb6\\xe3\\x83\\xbc'),$/;"	kind:variable	line:46
-field	../rentals/migrations/0002_auto_20170725_2305.py	/^            field=models.CharField(max_length=255, primary_key=True, serialize=False, verbose_name='バーコード'),$/;"	kind:variable	line:30
-field	../rentals/migrations/0002_auto_20170725_2305.py	/^            field=models.CharField(max_length=255, primary_key=True, serialize=False, verbose_name='社員番号'),$/;"	kind:variable	line:70
-field	../rentals/migrations/0002_auto_20170725_2305.py	/^            field=models.CharField(max_length=255, verbose_name='品名'),$/;"	kind:variable	line:50
-field	../rentals/migrations/0002_auto_20170725_2305.py	/^            field=models.CharField(max_length=255, verbose_name='氏名'),$/;"	kind:variable	line:75
-field	../rentals/migrations/0002_auto_20170725_2305.py	/^            field=models.CharField(max_length=255, verbose_name='管理者'),$/;"	kind:variable	line:45
-field	../rentals/migrations/0002_auto_20170725_2305.py	/^            field=models.CharField(max_length=255, verbose_name='資産管理番号'),$/;"	kind:variable	line:40
-field	../rentals/migrations/0002_auto_20170725_2305.py	/^            field=models.CharField(max_length=64, verbose_name='処理'),$/;"	kind:variable	line:60
-field	../rentals/migrations/0002_auto_20170725_2305.py	/^            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now, verbose_name='更新時間'),$/;"	kind:variable	line:24
-field	../rentals/migrations/0002_auto_20170725_2305.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='rentals', to='rentals.Equipment', verbose_name='備品'),$/;"	kind:variable	line:55
-field	../rentals/migrations/0002_auto_20170725_2305.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='rentals', to='rentals.User', verbose_name='ユーザー'),$/;"	kind:variable	line:65
-field	../rentals/migrations/0002_auto_20170725_2305.py	/^            field=models.TextField(blank=True, verbose_name='備考'),$/;"	kind:variable	line:35
+field	../rentals/migrations/0001_initial.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='rentals.User'),$/;"	kind:variable	line:46
 fields	../rentals/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:19
 fields	../rentals/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:29
 fields	../rentals/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:38
 fields	../rentals/serializers.py	/^        fields = ('barcode', 'name', 'manage_no', 'manage_user', 'comment')$/;"	kind:variable	line:15
 fields	../rentals/serializers.py	/^        fields = ('employee_no', 'name')$/;"	kind:variable	line:9
 fields	../rentals/serializers.py	/^        fields = ('id', 'equipment', 'user', 'processing', 'created_at')/;"	kind:variable	line:21
+filter_fields	../rentals/views.py	/^    filter_fields = ('equipment', 'user')$/;"	kind:variable	line:34
 get_wsgi_application	../myequipment/wsgi.py	/^from django.core.wsgi import get_wsgi_application$/;"	kind:namespace	line:12
 include	../myequipment/urls.py	/^from django.conf.urls import url, include$/;"	kind:namespace	line:18
 initial	../rentals/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:11
+is_rentaled	../rentals/models.py	/^    def is_rentaled(self):$/;"	kind:member	line:32
 list_display	../rentals/admin.py	/^    list_display = ('barcode', 'name', 'manage_no', 'manage_user', 'comment',)$/;"	kind:variable	line:16
 list_display	../rentals/admin.py	/^    list_display = ('employee_no', 'name',)$/;"	kind:variable	line:10
 list_display	../rentals/admin.py	/^    list_display = ('equipment_name', 'user_name', 'processing', 'created_at',)$/;"	kind:variable	line:30
 list_display_links	../rentals/admin.py	/^    list_display_links = ('barcode', 'name',)$/;"	kind:variable	line:17
 list_display_links	../rentals/admin.py	/^    list_display_links = ('employee_no', 'name',)$/;"	kind:variable	line:11
 manage.py	../manage.py	1;"	kind:file	line:1
-manage_no	../rentals/models.py	/^    manage_no = models.CharField('資産管理番号', max_length=255)$/;"	kind:variable	line:18
-manage_user	../rentals/models.py	/^    manage_user = models.CharField('管理者', max_length=255)$/;"	kind:variable	line:19
+manage_no	../rentals/models.py	/^    manage_no = models.CharField('資産管理番号', max_length=128)$/;"	kind:variable	line:18
+manage_user	../rentals/models.py	/^    manage_user = models.CharField('管理者', max_length=256)$/;"	kind:variable	line:19
 migrations	../rentals/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
-migrations	../rentals/migrations/0002_auto_20170725_2305.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 model	../rentals/serializers.py	/^        model = Equipment$/;"	kind:variable	line:14
 model	../rentals/serializers.py	/^        model = Rental$/;"	kind:variable	line:20
 model	../rentals/serializers.py	/^        model = User$/;"	kind:variable	line:8
 model_name	../rentals/migrations/0001_initial.py	/^            model_name='rental',$/;"	kind:variable	line:44
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='equipment',$/;"	kind:variable	line:28
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='equipment',$/;"	kind:variable	line:33
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='equipment',$/;"	kind:variable	line:38
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='equipment',$/;"	kind:variable	line:43
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='equipment',$/;"	kind:variable	line:48
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='rental',$/;"	kind:variable	line:18
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='rental',$/;"	kind:variable	line:22
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='rental',$/;"	kind:variable	line:53
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='rental',$/;"	kind:variable	line:58
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='rental',$/;"	kind:variable	line:63
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='user',$/;"	kind:variable	line:68
-model_name	../rentals/migrations/0002_auto_20170725_2305.py	/^            model_name='user',$/;"	kind:variable	line:73
 models	../rentals/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 models	../rentals/migrations/0001_initial.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
-models	../rentals/migrations/0002_auto_20170725_2305.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
-models	../rentals/migrations/0002_auto_20170725_2305.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
 models	../rentals/models.py	/^from django.db import models$/;"	kind:namespace	line:2
 models.py	../rentals/models.py	1;"	kind:file	line:1
 name	../rentals/apps.py	/^    name = 'rentals'$/;"	kind:variable	line:5
@@ -146,57 +117,44 @@ name	../rentals/migrations/0001_initial.py	/^            name='Equipment',$/;"	k
 name	../rentals/migrations/0001_initial.py	/^            name='Rental',$/;"	kind:variable	line:28
 name	../rentals/migrations/0001_initial.py	/^            name='User',$/;"	kind:variable	line:37
 name	../rentals/migrations/0001_initial.py	/^            name='user',$/;"	kind:variable	line:45
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='barcode',$/;"	kind:variable	line:29
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='comment',$/;"	kind:variable	line:34
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='created_at',$/;"	kind:variable	line:23
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='employee_no',$/;"	kind:variable	line:69
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='equipment',$/;"	kind:variable	line:54
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='manage_no',$/;"	kind:variable	line:39
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='manage_user',$/;"	kind:variable	line:44
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='name',$/;"	kind:variable	line:49
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='name',$/;"	kind:variable	line:74
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='processing',$/;"	kind:variable	line:59
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='update_at',$/;"	kind:variable	line:19
-name	../rentals/migrations/0002_auto_20170725_2305.py	/^            name='user',$/;"	kind:variable	line:64
-name	../rentals/models.py	/^    name = models.CharField('品名', max_length=255)$/;"	kind:variable	line:17
-name	../rentals/models.py	/^    name = models.CharField('氏名', max_length=255)$/;"	kind:variable	line:8
+name	../rentals/models.py	/^    name = models.CharField('品名', max_length=256)$/;"	kind:variable	line:17
+name	../rentals/models.py	/^    name = models.CharField('氏名', max_length=256)$/;"	kind:variable	line:8
 obtain_jwt_token	../myequipment/urls.py	/^from rest_framework_jwt.views import obtain_jwt_token$/;"	kind:namespace	line:21
 operations	../rentals/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:16
-operations	../rentals/migrations/0002_auto_20170725_2305.py	/^    operations = [$/;"	kind:variable	line:16
 os	../manage.py	/^import os$/;"	kind:namespace	line:2
 os	../myequipment/settings.py	/^import os$/;"	kind:namespace	line:13
 os	../myequipment/wsgi.py	/^import os$/;"	kind:namespace	line:10
-preserve_default	../rentals/migrations/0002_auto_20170725_2305.py	/^            preserve_default=False,$/;"	kind:variable	line:25
+permission_classes	../rentals/views.py	/^    permission_classes = (permissions.IsAuthenticated,)$/;"	kind:variable	line:22
+permission_classes	../rentals/views.py	/^    permission_classes = (permissions.IsAuthenticated,)$/;"	kind:variable	line:28
+permission_classes	../rentals/views.py	/^    permission_classes = (permissions.IsAuthenticated,)/;"	kind:variable	line:35
+permissions	../rentals/views.py	/^from rest_framework import permissions$/;"	kind:namespace	line:7
 processing	../rentals/models.py	/^    processing = models.CharField('処理', max_length=64)$/;"	kind:variable	line:30
-queryset	../rentals/views.py	/^    queryset = Equipment.objects.all()$/;"	kind:variable	line:31
-queryset	../rentals/views.py	/^    queryset = Rental.objects.all()$/;"	kind:variable	line:37
-queryset	../rentals/views.py	/^    queryset = User.objects.all()$/;"	kind:variable	line:25
+queryset	../rentals/views.py	/^    queryset = Equipment.objects.all()$/;"	kind:variable	line:26
+queryset	../rentals/views.py	/^    queryset = Rental.objects.all()$/;"	kind:variable	line:32
+queryset	../rentals/views.py	/^    queryset = User.objects.all()$/;"	kind:variable	line:20
 readonly_fields	../rentals/admin.py	/^    readonly_fields = ('user_name', 'equipment_name',)$/;"	kind:variable	line:22
 render	../rentals/views.py	/^from django.shortcuts import render$/;"	kind:namespace	line:2
 rental_list	../rentals/views.py	/^def rental_list(request):$/;"	kind:function	line:10
 rentals_router	../myequipment/urls.py	/^from rentals.urls import router as rentals_router$/;"	kind:namespace	line:20
 router	../rentals/urls.py	/^router = routers.DefaultRouter()$/;"	kind:variable	line:11
 routers	../rentals/urls.py	/^from rest_framework import routers$/;"	kind:namespace	line:4
-serializer_class	../rentals/views.py	/^    serializer_class = EquipmentSerializer$/;"	kind:variable	line:32
-serializer_class	../rentals/views.py	/^    serializer_class = RentalSerializer$/;"	kind:variable	line:38
-serializer_class	../rentals/views.py	/^    serializer_class = UserSerializer$/;"	kind:variable	line:26
+serializer_class	../rentals/views.py	/^    serializer_class = EquipmentSerializer$/;"	kind:variable	line:27
+serializer_class	../rentals/views.py	/^    serializer_class = RentalSerializer$/;"	kind:variable	line:33
+serializer_class	../rentals/views.py	/^    serializer_class = UserSerializer$/;"	kind:variable	line:21
 serializers	../rentals/serializers.py	/^from rest_framework import serializers$/;"	kind:namespace	line:2
 serializers.py	../rentals/serializers.py	1;"	kind:file	line:1
 settings.py	../myequipment/settings.py	1;"	kind:file	line:1
 sys	../manage.py	/^import sys$/;"	kind:namespace	line:3
 tests.py	../rentals/tests.py	1;"	kind:file	line:1
-timezone	../rentals/migrations/0002_auto_20170725_2305.py	/^import django.utils.timezone$/;"	kind:namespace	line:7
 unicode_literals	../rentals/migrations/0001_initial.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
-unicode_literals	../rentals/migrations/0002_auto_20170725_2305.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
 url	../myequipment/urls.py	/^from django.conf.urls import url, include$/;"	kind:namespace	line:18
 url	../rentals/urls.py	/^from django.conf.urls import url$/;"	kind:namespace	line:2
 urlpatterns	../myequipment/urls.py	/^urlpatterns = [$/;"	kind:variable	line:23
 urlpatterns	../rentals/urls.py	/^urlpatterns = [$/;"	kind:variable	line:7
 urls.py	../myequipment/urls.py	1;"	kind:file	line:1
 urls.py	../rentals/urls.py	1;"	kind:file	line:1
-user	../rentals/models.py	/^    user = models.ForeignKey(User, verbose_name='ユーザー', related_name='rentals_user')$/;"	kind:variable	line:29
+user	../rentals/models.py	/^    user = models.ForeignKey(User)$/;"	kind:variable	line:29
 user_name	../rentals/admin.py	/^    def user_name(self, obj):$/;"	kind:member	line:24
-utils	../rentals/migrations/0002_auto_20170725_2305.py	/^import django.utils.timezone$/;"	kind:namespace	line:7
 views	../rentals/urls.py	/^from . import views$/;"	kind:namespace	line:3
 views.py	../rentals/views.py	1;"	kind:file	line:1
 viewsets	../rentals/views.py	/^from rest_framework import viewsets$/;"	kind:namespace	line:4

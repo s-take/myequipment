@@ -6,7 +6,7 @@ from .models import User, Equipment, Rental
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('employee_no', 'name')
+        fields = ('nfc_id', 'employee_no', 'name')
 
 
 class EquipmentSerializer(serializers.ModelSerializer):
