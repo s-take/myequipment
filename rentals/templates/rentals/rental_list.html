@@ -18,7 +18,7 @@ table {
           <th>備品</th>
           <th>管理番号</th>
           <th>管理者</th>
-          <th>利用者</th>
+          <th>最終利用者</th>
           <th>ステータス</th>
           <th>最終更新日</th>
           <th>備考</th>
@@ -29,7 +29,7 @@ table {
         <tr>
           <td>{{ rental.equipment.name }}</td>
           <td>{{ rental.equipment.manage_no }}</td>
-          <td>{{ rental.equipment.manage_name }}</td>
+          <td>{{ rental.equipment.manage_user }}</td>
           <td>{{ rental.user.name }}</td>
           <td>{{ rental.is_rentaled|yesno:'貸出中,' }}</td>
           <td>{{ rental.created_at }}</td>

@@ -31,7 +31,7 @@ class EquipmentViewSet(viewsets.ModelViewSet):
 
 
 class RentalViewSet(viewsets.ModelViewSet):
-    queryset = Rental.objects.all()
+    queryset = Rental.objects.all().order_by('-created_at')
     serializer_class = RentalSerializer
     filter_fields = ('equipment', 'user')
     permission_classes = (permissions.IsAuthenticated,)
